@@ -1,0 +1,62 @@
+<header class="page-header">
+  <div class="container">
+    <nav class="header-nav">
+      <a class="header-logo link" href="./">
+        <span class="header-logo__text">Filmoteka</span>
+      </a>
+
+      <ul class="header-nav__menu list">
+        <li class="header-nav__item">
+          <a class="link link--current" href="">HOME</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="link" id="logIn" href="./">Log In</a>
+        </li>
+      </ul>
+    </nav>
+
+    <form class="search-form">
+      <input
+        class="search-form__input"
+        type="text"
+        placeholder="Movie search"
+      />
+
+      <button class="search-form__btn" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div modal class="backdrop is-hidden">
+    <div class="modal">
+      <button modal-close type="button" class="modal-button"></button>
+
+      <form class="form-login">
+        <label
+          >Email
+          <input type="email" name="login" />
+        </label>
+
+        <label
+          >Password
+          <input type="text" name="pass" />
+        </label>
+
+        <button type="submit">LogIn</button>
+      </form>
+
+      <form class="form-SingIn">
+        <label
+          >Email
+          <input type="email" name="login" />
+        </label>
+
+        <label
+          >Password
+          <input type="text" name="pass" />
+        </label>
+
+        <button type="submit">LogIn</button>
+      </form>
+    </div>
+  </div>
+</header>
