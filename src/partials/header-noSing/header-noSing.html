@@ -9,8 +9,17 @@
         <li class="header-nav__item">
           <a class="link link--current" href="">HOME</a>
         </li>
-        <li class="header-nav__item">
+
+        <li class="header-nav__item btnNotAuth">
           <a class="link" id="logIn" href="./">Log In</a>
+        </li>
+
+        <li class="header-nav__item btnAuth is-hidden">
+          <a class="link" id="logIn" href="./myLibrary.html">My Library</a>
+        </li>
+
+        <li class="header-nav__item btnAuth is-hidden">
+          <a class="link" id="logIn" href="./myLibrary.html">Log out</a>
         </li>
       </ul>
     </nav>
@@ -26,7 +35,7 @@
     </form>
   </div>
 
-  <div modal class="backdrop is-hidden">
+  <div modal class="backdrop">
     <div class="modal">
       <button modal-close type="button" class="modal-button"></button>
 
