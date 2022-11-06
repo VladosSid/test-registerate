@@ -3,7 +3,10 @@ const logIn = document.querySelector('#logIn');
 const buttonClose = document.querySelector('.modal-button');
 
 logIn.addEventListener('click', toggleModal);
-buttonClose.addEventListener('click', toggleModal);
+
+if (buttonClose) {
+  buttonClose.addEventListener('click', toggleModal);
+}
 
 function toggleModal(e) {
   e.preventDefault();

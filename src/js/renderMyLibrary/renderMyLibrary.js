@@ -1,5 +1,5 @@
 const btnNotAuth = document.querySelector('.btnNotAuth');
-const btnAuth = document.querySelectorAll('.btnAyth');
+const btnAuth = document.querySelectorAll('.btnAuth');
 
 export function renderBtnAuth() {
   btnNotAuth.classList.toggle('is-hidden');

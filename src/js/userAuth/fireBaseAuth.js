@@ -1,4 +1,4 @@
-import { auth, veryfiUser } from '../index';
+import { auth, veryfiUser, getUsersessionData } from '../index';
 
 import {
   createUserWithEmailAndPassword,
@@ -8,7 +8,7 @@ import {
 const form = document.querySelector('.form-login');
 const formSingIn = document.querySelector('.form-SingIn');
 
-// REG
+// ======= RegUser ========
 form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
@@ -52,7 +52,7 @@ function handleSubmit(event) {
   event.currentTarget.reset();
 }
 
-// AUTH
+// ========= AuthUser ========
 formSingIn.addEventListener('submit', singIn);
 
 function singIn(event) {
@@ -80,6 +80,7 @@ function singIn(event) {
     .then(userCredential => {
       // Signed in
       veryfiUser();
+      getUsersessionData();
       const user = userCredential.user;
       console.log('Вход выполнен');
       // ...

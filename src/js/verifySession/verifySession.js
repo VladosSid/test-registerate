@@ -9,26 +9,26 @@ export function setVerifyToken(sessionToken, uid) {
   };
 
   localStorage.setItem('userSession', JSON.stringify(dataSessionUser));
-  getUsersessionData();
 }
 
-function getUsersessionData() {
+export function getUsersessionData() {
   const localDataSession = localStorage.getItem('userSession');
 
   try {
     sessionTokenLocal = JSON.parse(localDataSession).token;
 
-    accessTokenVerification();
+    accessTokenVerification(sessionTokenLocal);
   } catch (error) {
     console.log(error.name);
     console.log(error.message);
   }
 }
 
-export function accessTokenVerification() {
-  if (sessionTokenLocal === currentToken) {
+export function accessTokenVerification(sessionTokenLocal) {
+  if (sessionTokenLocal === currentToken && sessionTokenLocal !== '') {
     renderBtnAuth();
     return toggleModalForAuth();
   }
-  console.log('Сессия завершена, авторизуйтесь заново!!!');
+
+  console.log('Пользователь не авторизован, авторизуйтесь заново!!!');
 }

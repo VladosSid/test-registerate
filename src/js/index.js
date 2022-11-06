@@ -5,5 +5,5 @@ export * from './userAuth';
 export * from './userInActive';
 export * from './verifySession';
 
-import { accessTokenVerification } from './verifySession';
-accessTokenVerification();
+import { veryfiUser } from './index';
+veryfiUser();
