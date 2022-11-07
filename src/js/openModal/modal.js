@@ -2,17 +2,19 @@ const backdropEl = document.querySelector('.backdrop');
 const logIn = document.querySelector('#logIn');
 const buttonClose = document.querySelector('.modal-button');
 
-logIn.addEventListener('click', toggleModal);
+logIn.addEventListener('click', openModal);
 
-if (buttonClose) {
-  buttonClose.addEventListener('click', toggleModal);
+buttonClose.addEventListener('click', closeModal);
+
+function closeModal(e) {
+  backdropEl.classList.add('is-hidden');
 }
 
-function toggleModal(e) {
+export function closeModalForAuth() {
+  backdropEl.classList.add('is-hidden');
+}
+
+export function openModal(e) {
   e.preventDefault();
-  backdropEl.classList.toggle('is-hidden');
-}
-
-export function toggleModalForAuth() {
-  backdropEl.classList.toggle('is-hidden');
+  backdropEl.classList.remove('is-hidden');
 }

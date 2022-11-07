@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 
-import { auth, renderBtnAuth, currentToken } from '../index';
+import { auth, renderBtnAuth } from '../index';
 
 const logOutUser = document.querySelector('#logOut');
 logOutUser.addEventListener('click', userOut);

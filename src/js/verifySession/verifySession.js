@@ -1,4 +1,4 @@
-import { currentToken, renderBtnAuth, toggleModalForAuth } from '../index';
+import { currentToken, renderBtnAuth, closeModalForAuth } from '../index';
 
 let sessionTokenLocal = '';
 
@@ -27,7 +27,7 @@ export function getUsersessionData() {
 export function accessTokenVerification(sessionTokenLocal) {
   if (sessionTokenLocal === currentToken && sessionTokenLocal !== '') {
     renderBtnAuth();
-    return toggleModalForAuth();
+    return closeModalForAuth();
   }
 
   console.log('Пользователь не авторизован, авторизуйтесь заново!!!');
